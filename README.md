@@ -26,11 +26,14 @@ Audit JS/TS project code for signs of infection, malware, backdoors, or supply-c
 - Git hooks and IDE config (Medium)
 - Dependency supply chain (Critical)
 - CI/CD pipeline poisoning (High)
+- LLM audit evasion (High)
 - Binary and media files (Medium)
 - Docker and container risks (Medium)
 
 **Output:**
 Generates `_js_malware_audit_report.md` with findings, severity ratings, dependency audit summary, and an overall safety assessment.
+
+> **Caveat:** No system prompt is 100% injection-proof. A sophisticated attacker could still potentially influence an LLM-based audit. The mitigations in this skill make it significantly harder and turn injection attempts themselves into auditable findings - but this should not be treated as a guarantee. Use it as one layer in a broader security review, not a replacement for human analysis.
 
 ## Installation
 
