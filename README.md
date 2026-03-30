@@ -41,6 +41,24 @@ Generates `_js_malware_audit_report.md` with findings, severity ratings, depende
 
 > **Caveat:** No system prompt is 100% injection-proof. A sophisticated attacker could still potentially influence an LLM-based audit. The mitigations in this skill make it significantly harder and turn injection attempts themselves into auditable findings - but this should not be treated as a guarantee. Use it as one layer in a broader security review, not a replacement for human analysis.
 
+### ai-slop-detection
+
+Check the project for AI slop across language, code, UI, and configuration. Useful for spotting vibe-coded projects or AI-generated PRs that were merged without review.
+
+**Use when:**
+- Evaluating a project you didn't write
+- Reviewing code from AI coding tools (Lovable, Bolt.new, v0, etc.)
+- Auditing a codebase for low-effort AI output
+
+**Categories covered:**
+- Language slop (buzzwords, filler phrases, em dashes, emojis)
+- Code slop (obvious comments, generic names, unused imports, phantom dependencies, vibe-coding platform artifacts)
+- Test slop (vacuous assertions, mock-heavy suites, empty test files)
+- UI/style slop (purple gradients, blob backgrounds, generic section names)
+
+**Output:**
+Findings grouped by category with file:line references and a conclusion: likely AI-generated / mixed / likely human.
+
 ## Installation
 
 ```bash
@@ -60,6 +78,9 @@ Check this codebase for backdoors before I run it
 ```
 ```
 Vet the dependencies in this JS project
+```
+```
+Check this project for AI slop
 ```
 
 ## Skill Structure
