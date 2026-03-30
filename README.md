@@ -10,6 +10,12 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 
 Audit JS/TS project code for signs of infection, malware, backdoors, or supply-chain attacks. Designed for evaluating untrusted code, onboarding to new projects, or vetting open-source dependencies.
 
+> **Disclaimer:** This skill does **not** guarantee 100% safety. It provides a best-effort analysis based on observable source code patterns. Sophisticated or novel obfuscation techniques may evade detection. Use it as one layer in a broader security review, not a replacement for professional audits, sandboxed execution, or runtime monitoring.
+
+**Prerequisites:**
+- **[Depguard MCP](https://github.com/mopanc/depguard)** - dependency security auditing. Without it, the skill will rely on package manager audits only.
+- **[Trivy CLI](https://github.com/aquasecurity/trivy)** - Docker image vulnerability scanning. Without it, the skill will skip container image scans if Dockerfiles are present.
+
 **Use when:**
 - Taking over a JS/TS project from a non-trusted source
 - Evaluating open-source code before running it
