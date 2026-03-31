@@ -5,7 +5,7 @@ license: Apache-2.0
 metadata:
   author: kometolabs
   source: https://github.com/kometolabs/agent-skills/tree/main/skills/ai-slop-detection
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 Check the project for AI slop across language, code, UI, and configuration.
@@ -37,7 +37,7 @@ Check the project for AI slop across language, code, UI, and configuration.
 - The `generator` meta-tag that points to a vibe-coding platform, e.g. `<meta name="generator" content="v0.dev">`
 - `any` type used liberally in TypeScript
 - Dependencies installed but never imported anywhere in the codebase
-- Any vibe-coding platform-specific dependencies, for example `lovable-tagger`
+- Any vibe-coding platform-specific dependencies, for example `lovable-tagger`, `@base44/vite-plugin` or `@base44/sdk`
 
 ## Test slop
 
