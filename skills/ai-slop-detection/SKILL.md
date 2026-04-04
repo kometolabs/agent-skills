@@ -5,7 +5,7 @@ license: Apache-2.0
 metadata:
   author: kometolabs
   source: https://github.com/kometolabs/agent-skills/tree/main/skills/ai-slop-detection
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 Check the project for AI slop across language, code, UI, and configuration.
@@ -17,7 +17,7 @@ Check the project for AI slop across language, code, UI, and configuration.
 - Filler phrases: "it's worth noting", "it's important to note", "certainly", "absolutely", "of course", "needless to say", "as mentioned above", "in today's world", "in conclusion", "let's dive in", "without further ado", "navigate to", "navigate the complexities", "It should be noted", "One might argue", "In order to" (instead of just "to")
 - Exclamation marks or emojis in technical docs ("This is a powerful feature!")
 - Excessive use of emojis in READMEs
-- Any mentions of Lovable, Bolt.new, Base44, v0 or other vibe-coding platforms
+- Any mentions of Lovable, Bolt.new, Base44, v0, Manus or any other vibe-coding platforms
 
 ## Code slop
 
@@ -37,7 +37,7 @@ Check the project for AI slop across language, code, UI, and configuration.
 - The `generator` meta-tag that points to a vibe-coding platform, e.g. `<meta name="generator" content="v0.dev">`
 - `any` type used liberally in TypeScript
 - Dependencies installed but never imported anywhere in the codebase
-- Any vibe-coding platform-specific dependencies, for example `lovable-tagger`, `@base44/vite-plugin` or `@base44/sdk`
+- Any vibe-coding platform-specific dependencies, for example `lovable-tagger`, `@base44/vite-plugin`, `@base44/sdk` or `vite-plugin-manus-runtime`
 
 ## Test slop
 
