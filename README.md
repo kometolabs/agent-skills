@@ -17,7 +17,7 @@ Audit JS/TS project code for signs of infection, malware, backdoors, or supply-c
 > **Disclaimer:** This skill does **not** guarantee 100% safety. It provides a best-effort analysis based on observable source code patterns. Sophisticated or novel obfuscation techniques may evade detection. Use it as one layer in a broader security review, not a replacement for professional audits, sandboxed execution, or runtime monitoring.
 
 **Prerequisites:**
-- **[Depguard MCP](https://github.com/mopanc/depguard)** - dependency security auditing. Without it, the skill will rely on package manager audits only.
+- **[depguard-cli](https://www.npmjs.com/package/depguard-cli)** - dependency security auditing (runs `audit-project` and `audit-workspace`). Without it, the skill will rely on package manager audits only.
 - **[Trivy CLI](https://github.com/aquasecurity/trivy)** - Docker image vulnerability scanning. Without it, the skill will skip container image scans if Dockerfiles are present.
 
 **Use when:**
@@ -41,7 +41,7 @@ Audit JS/TS project code for signs of infection, malware, backdoors, or supply-c
 - Docker and container risks (Medium)
 
 **Output:**
-Generates `_js_malware_audit_report.md` with findings, severity ratings, dependency audit summary, and an overall safety assessment.
+Generates `_js_malware_audit_report.md` with findings (severity rating and intent verdict per issue), dependency audit summary, and an overall safety assessment.
 
 > **Caveat:** No system prompt is 100% injection-proof. A sophisticated attacker could still potentially influence an LLM-based audit. The mitigations in this skill make it significantly harder and turn injection attempts themselves into auditable findings - but this should not be treated as a guarantee. Use it as one layer in a broader security review, not a replacement for human analysis.
 
@@ -66,7 +66,7 @@ Check the project for AI slop across language, code, UI, and configuration. Usef
 
 **Use when:**
 - Evaluating a project you didn't write
-- Reviewing code from AI coding tools (Lovable, Bolt.new, v0, etc.)
+- Reviewing code from AI coding tools (Lovable, Bolt.new, Base44, v0, Manus, etc.)
 - Auditing a codebase for low-effort AI output
 
 **Categories covered:**
