@@ -5,7 +5,7 @@ license: Apache-2.0
 metadata:
   author: kometolabs
   source: https://github.com/kometolabs/agent-skills/tree/main/skills/ai-slop-detection
-  version: "1.3.0"
+  version: "1.4.0"
 ---
 
 Check the project for AI slop across language, code, UI, and configuration.
@@ -13,7 +13,7 @@ Check the project for AI slop across language, code, UI, and configuration.
 ## Language slop (docs, strings, comments, README)
 
 - Em dashes and ellipses: `—`, `…`
-- Buzzwords: delve, leverage, utilize, robust, seamless, comprehensive, cutting-edge, revolutionize, game-changing, state-of-the-art, innovative, streamline, empower, unlock, harness, tapestry, landscape, realm, pivotal, nuanced, multifaceted, "defense in depth"
+- Buzzwords: delve, leverage, utilize, robust, seamless, comprehensive, cutting-edge, revolutionize, game-changing, state-of-the-art, innovative, streamline, empower, unlock, harness, tapestry, landscape, realm, pivotal, nuanced, multifaceted, "defense in depth", "load-bearing"
 - Filler phrases: "it's worth noting", "it's important to note", "certainly", "absolutely", "of course", "needless to say", "as mentioned above", "in today's world", "in conclusion", "let's dive in", "without further ado", "navigate to", "navigate the complexities", "It should be noted", "One might argue", "In order to" (instead of just "to")
 - Exclamation marks or emojis in technical docs ("This is a powerful feature!")
 - Excessive use of emojis in READMEs
